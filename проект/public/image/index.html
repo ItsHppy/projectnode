@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Accout</title>
+    <script defer src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <a href="/uploads">/uploads</a>
+    <a href="/users">/users</a>
+    <h1>Accout</h1>
+    <form
+      id="form"
+      action="/api/upload/user"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <div>
+        <img id="avatarImage" class="hide fit-size" src="" alt="Avatar" />
+        <label
+          id="avatarSelectLabel"
+          class="preview-avatar fit-size"
+          for="avatarSelect"
+          >Select Avatar</label
+        >
+        <input
+          id="avatarSelect"
+          class="disable"
+          type="file"
+          name="avatarImgName"
+          accept="image/*"
+        />
+      </div>
+
+      <div>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          name="username"
+          required
+        />
+      </div>
+      <div>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          required
+        />
+      </div>
+      <div>
+        <input
+          type="password"
+          placeholder="Repeat Password"
+          name="passwordRepeat"
+          required
+        />
+      </div>
+
+      <div><button id="sendDataButton">Click Me</button></div>
+    </form>
+  </body>
+</html>

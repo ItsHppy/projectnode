@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Погода в городе</title>
+</head>
+
+  <script>
+  function digitalClock() {
+  var date = new Date();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+  if (hours < 10) hours = "0" + hours;
+  if (minutes < 10) minutes = "0" + minutes;
+  if (seconds < 10) seconds = "0" + seconds;
+  document.getElementById("id_clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+  setTimeout("digitalClock()", 1000);
+  
+  }
+  </script>
+  <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full&lazy=true"></script>
+  
+  
+ 
+<body>
+
+  
+  <div class="sun">
+
+  </div>
+  <div class="container">
+    <div class="wrapper">
+      <div class="img_section">
+        <div class="default_info">
+          <h2 class="default_day">Sunday</h2>
+          <span class="default_date">18 September 2023 </span>
+          <h2 class="default_time">
+            <div id="id_clock"></div>
+          <script>digitalClock();</script>
+          </h2>
+          <head>
+            <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+            <script type="text/javascript">
+            </script>
+        </head>
+        <body>
+            <div id="map" style="width:350px; height:400px"></div>
+        </body>
+        </div>
+      </div>
+      <div class="content_section">
+        <h2>Привет</h2>
+        <form action="" class="form" id="form">
+          <input type="text" class="form__input" placeholder="Введите город">
+          <button class="form__btn">
+              Поиск 🔎
+          </button>
+      </form>
+
+        <div class="day_info">
+          <div class="content">
+            <p class="title">Имя</p>
+            <span class="weather__city"></span>
+          </div>
+          
+          <div class="content">
+            <p class="title">Температура</p>
+            <span class="weather__temp"></span>
+          </div>
+          <div class="content">
+            <p class="title">Влажность</p>
+            <span class="details__value" id="humidity"></span>
+          </div>
+          <div class="content">
+            <p class="title">Скорость ветра</p>
+            <span class="details__value" id="speed"></span>
+          </div>
+          <div class="content">
+            <p class="title">Характеристика погоды</p>
+            <span class="details__value" id="har"></span>
+          </div>
+        </div>
+
+        <div class="list_content">
+          <ul>
+            <li>
+              <img src="https://openweathermap.org/img/wn/13d@2x.png" />
+              <span></span>
+              <h2 class="weather_temp"></h2>
+            </li>
+            <li>
+              <img src="https://openweathermap.org/img/wn/10d@2x.png" />
+              <span></span>
+              <h2 class="weather_temp"></h2>
+            </li>
+            <li>
+              <img src="https://openweathermap.org/img/wn/13d@2x.png" />
+              <span></span>
+              <h2 class="weather_temp"></h2>
+            </li>
+            <li>
+              <img src="https://openweathermap.org/img/wn/13d@2x.png" />
+              <span></span>
+              <h2 class="weather_temp"></h2>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="weather">
+    <div class="weather__info none">
+        <div class="weather__temp"></div>
+        <div class="weather__city"></div>
+    </div>
+
+    <section class="weather__details none">
+        <section class="details">
+            <div class="details__value" id="humidity"></div>
+            <div class="details__title"></div>
+        </section>
+
+        <section class="details">
+            <div class="details__value" id="speed"></div>
+            <div class="details__title"></div>
+        </section>
+        <section class="details">
+            <div class="details__value" id="har"></div>
+            <div class="details__title"></div>
+        </section>
+    </section>
+</main>
+  <script src="script.js"></script>
+</body>
+</html>
+

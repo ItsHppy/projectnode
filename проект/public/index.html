@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация и Вход </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация</h1>
+        <form id="registrationForm">
+            <input type="text" id="regUsername" placeholder="Имя пользователя" required>
+            <input type="email" id="regEmail" placeholder="Электронная почта" required>
+            <input type="password" id="regPassword" placeholder="Пароль" required>
+            <button type="submit" id="pinus">Зарегистрироваться </button>
+        </form>
+
+        <h1>Вход </h1>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Электронная почта" required>
+            <input type="password" id="loginPassword" placeholder="Пароль" required>
+            <button type="submit" id="penis">Войти </button>
+        </form>
+
+        <div id="message"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@keyframes fadeIn {
+  to {
+    transition: all 0.5s ease-in;
+    opacity: 1;
+  }
+}
+
+body {
+  background-image: url("https://sputnik.kg/img/07e5/0a/15/1054296808_3:0:3644:2048_1920x0_80_0_0_b84e48c0b72a3c4cedca67529aa66404.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "poppins", sans-serif;
+  
+}
+
+.container {
+  max-width: 850px;
+  width: 850px;
+  background-image: url(image/mlechnyj_put_zvezdnoe_nebo_zvezdy_128523_3840x2160.jpg);
+  color: #fff;
+  background-size: cover;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.img_section {
+  border-radius: 25px;
+  background-image: url("../img/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transform: scale(1.03) perspective(200px);
+}
+
+.img_section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #233e89 10%, rgb(46, 39, 117) 100%);
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 25px;
+}
+
+.default_info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.default_info img {
+  width: 80%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.default_info h2 {
+  font-size: 3rem;
+}
+
+.default_info h3 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.weather_temp {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.form__input{
+  color: #fff;
+}
+
+.content_section {
+  padding: 1.5rem;
+}
+
+.content_section form {
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.content_section form input {
+  width: 84%;
+  outline: none;
+  background: transparent;
+  border: 1px solid #37474f;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  font-family: inherit;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.content_section form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 5px;
+  padding: 1rem 0.7rem;
+  font-family: inherit;
+  font-size: 0.6rem;
+  outline: none;
+  border: none;
+  background-image: url(image/images.jpg);
+  color: #fff;
+  cursor: pointer;
+}
+
+.day_info .content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+}
+
+.day_info .content .title {
+  font-weight: 600;
+}
+
+.list_content ul {
+  color: #232931;
+  width: 400px;
+  background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVq4IJDf6-206MXxjsRCCi6W0evGgdAkymkg&s);
+  display: flex;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+  background-size: cover;
+  border-radius: 10px;
+  background-position: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 3rem 0rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.list_content ul li {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in;
+}
+
+.list_content > ul > li > span{
+  text-align: center;
+}
+
+.list_content ul li:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  color: #232931;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+.list_content ul li img {
+  width: 50%;
+  object-fit: cover;
+}
+.sun{
+  height: 15vh;
+  width: 15vh;
+  background-image: url("image/pngwing.com.png");
+  background-size: cover;
+  position: absolute;
+  top: 13px;
+  right: 15px;
+}
+
+#btn{
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  color: red;
+  font-weight: bold;
+  font-size: 3rem;
+}
